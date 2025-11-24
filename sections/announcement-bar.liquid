@@ -1,0 +1,16 @@
+{% assign s = section.settings %}
+
+<div class="announcement-bar" style="background-color:{{ s.background_color }}; color:{{ s.text_color }};">
+    {{ s.announcement_text }}
+</div>
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    { "type": "text", "id": "announcement_text", "label": "Announcement Text", "default": "Welcome to our store" },
+    { "type": "color", "id": "background_color", "label": "Background Color", "default": "#000000" },
+    { "type": "color", "id": "text_color", "label": "Text Color", "default": "#ffffff" }
+  ]
+}
+{% endschema %}
